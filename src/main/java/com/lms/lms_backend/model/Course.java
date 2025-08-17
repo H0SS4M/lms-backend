@@ -2,6 +2,7 @@ package com.lms.lms_backend.model;
 
 import com.lms.lms_backend.enums.CourseStatus;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Future;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -41,9 +42,11 @@ public class Course extends BaseEntitiy {
     private Integer enrolledCount = 0;
     
     @Column(name = "start_date")
+    @Future(message = "Start date must be in the future")
     private LocalDateTime startDate;
     
     @Column(name = "end_date")
+    @Future(message = "End date must be in the future")
     private LocalDateTime endDate;
     
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)

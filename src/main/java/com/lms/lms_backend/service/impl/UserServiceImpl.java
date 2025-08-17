@@ -103,7 +103,6 @@ public class UserServiceImpl implements UserService {
     
     private UserResponse mapToResponse(User user) {
         return UserResponse.builder()
-                .id(user.getId())
                 .email(user.getEmail())
                 .firstName(user.getFirstName())
                 .lastName(user.getLastName())

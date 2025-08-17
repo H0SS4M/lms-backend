@@ -1,8 +1,8 @@
 package com.lms.lms_backend.controller;
 
 import com.lms.lms_backend.dto.UserRegistrationRequest;
-import com.lms.lms_backend.dto.UserUpdateRequest;
 import com.lms.lms_backend.dto.UserResponse;
+import com.lms.lms_backend.dto.UserUpdateRequest;
 import com.lms.lms_backend.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
